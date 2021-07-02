@@ -45,7 +45,7 @@ jobs:
     - name: Azure Kubernetes set context
       uses: Azure/aks-set-context@v1.1
       with:
-        creds: ${{ secrests.AZURE_CREDENTIALS }} 
+        creds: ${{ secrets.AZURE_CREDENTIALS }} 
         resource-group: TestResource
         cluster-name: atelier-cluster
       
