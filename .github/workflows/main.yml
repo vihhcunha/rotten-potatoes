@@ -55,4 +55,10 @@ jobs:
         manifests: | 
           k8s/mongodb/deployment.yaml
           k8s/mongodb/service.yaml
-      
+    - name: Deploy web
+      uses: Azure/k8s-deploy@v1
+      with:
+        manifests: | 
+          k8s/web/deployment.yaml
+        images: vihhcunha/rotten-potatoes2:${{ github.run_number }}
+        
