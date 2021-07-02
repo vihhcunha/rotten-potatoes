@@ -49,4 +49,10 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }} 
         resource-group: TestResource
         cluster-name: atelier-cluster
+    - name: Deploy mongo
+      uses: Azure/k8s-deploy@v1
+      with:
+        manifests: | 
+          k8s/mongodb/deployment.yaml
+          k8s/mongodb/service.yaml
       
