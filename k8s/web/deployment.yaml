@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: movies
-          image: vihhcunha/rotten-potatoes:v2 
+          image: vihhcunha/rotten-potatoes
           imagePullPolicy: Always #Puxar imagens sempre e não guardar no cache
           ports:
             - containerPort: 5000
