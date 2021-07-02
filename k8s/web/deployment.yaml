@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: movies
 spec:
-  replicas: 10
+  replicas: 5
   selector:
     matchLabels:
       app: movies
@@ -43,4 +43,4 @@ spec:
     - port: 80
       targetPort: 5000
       nodePort: 30000
-  type: NodePort
+  type: LoadBalancer
